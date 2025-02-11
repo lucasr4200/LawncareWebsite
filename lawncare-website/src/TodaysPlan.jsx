@@ -51,7 +51,7 @@ export default function TodaysPlan() {
         <div className="min-h-screen bg-gray-100 flex flex-col">
             <header className="bg-white shadow">
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                    <div className="text-2xl font-bold text-green-600">LawnCare Pro</div>
+                    <div className="text-2xl font-bold text-green-600">LawnCare by Lucas</div>
                     <nav className="flex space-x-6">
                         <a href="/" className="text-gray-700 hover:text-green-600 font-medium">Dashboard</a>
                         <a href="#" className="text-gray-700 hover:text-green-600 font-medium">Customers</a>
@@ -112,7 +112,7 @@ export default function TodaysPlan() {
             )}
 
             <footer className="bg-white shadow py-4">
-                <div className="container mx-auto text-center text-gray-600 text-sm">© 2025 LawnCare Pro. All rights reserved.</div>
+                <div className="container mx-auto text-center text-gray-600 text-sm">© 2025 LawnCare by Lucas. All rights reserved.</div>
             </footer>
         </div>
     );

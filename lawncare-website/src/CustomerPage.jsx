@@ -31,7 +31,7 @@ export default function CustomerPage() {
             {/* Header */}
             <header className="bg-green-600 text-white shadow">
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                    <div className="text-2xl font-bold">LawnCare Pro</div>
+                    <div className="text-2xl font-bold">LawnCare by Lucas</div>
                     <div className="text-lg">X happy, local customers served!</div>
                 </div>
             </header>
@@ -92,7 +92,7 @@ export default function CustomerPage() {
 
                 {/* Why LawnCare Section */}
                 <div className="bg-white shadow-lg rounded-lg p-6">
-                    <h2 className="text-xl font-bold text-gray-800 mb-4">Why LawnCare Pro?</h2>
+                    <h2 className="text-xl font-bold text-gray-800 mb-4">Why LawnCare by Lucas?</h2>
                     <p className="text-gray-700">
                         - Trusted by local customers<br />
                         - Professional lawn care services<br />

@@ -5,11 +5,11 @@ export default function HomePage() {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col">
+        <div className="min-h-screen flex flex-col bg-gray-100">
             {/* Header */}
             <header className="bg-white shadow">
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                    <div className="text-2xl font-bold text-green-600">LawnCare Pro</div>
+                    <div className="text-2xl font-bold text-green-600">LawnCare by Lucas</div>
                     <nav className="flex space-x-6">
                         <a href="#" className="text-gray-700 hover:text-green-600 font-medium">Dashboard</a>
                         <a href="#" className="text-gray-700 hover:text-green-600 font-medium">Customers</a>
@@ -20,7 +20,7 @@ export default function HomePage() {
             </header>
 
             {/* Main Content */}
-            <main className="container mx-auto py-10 px-6 text-center">
+            <main className="container mx-auto flex-grow py-10 px-6 text-center">
                 <h1 className="text-3xl font-bold text-gray-800 mb-8">
                     We have served <span className="text-green-600">X customers</span>!
                 </h1>
@@ -30,7 +30,7 @@ export default function HomePage() {
                     <div className="bg-white shadow-lg rounded-lg p-6">
                         <h2 className="text-lg font-semibold text-gray-800 mb-4">Today Plan</h2>
                         <button
-                            className="bg-green-600 text-white py-2 px-4 rounded-lg w-full hover:bg-green-700"
+                            className="bg-black text-white py-2 px-4 rounded-lg w-full hover:bg-gray-800"
                             onClick={() => navigate("/todays-plan")}
                         >
                             View
@@ -41,7 +41,7 @@ export default function HomePage() {
                     <div className="bg-white shadow-lg rounded-lg p-6">
                         <h2 className="text-lg font-semibold text-gray-800 mb-4">Customer-Facing Site</h2>
                         <button
-                            className="bg-blue-600 text-white py-2 px-4 rounded-lg w-full hover:bg-blue-700"
+                            className="bg-black text-white py-2 px-4 rounded-lg w-full hover:bg-gray-800"
                             onClick={() => navigate("/customer")}
                         >
                             Visit
@@ -51,7 +51,9 @@ export default function HomePage() {
                     {/* Projected Revenue Card */}
                     <div className="bg-white shadow-lg rounded-lg p-6">
                         <h2 className="text-lg font-semibold text-gray-800 mb-4">Projected Revenue Today</h2>
-                        <button className="bg-yellow-600 text-white py-2 px-4 rounded-lg w-full hover:bg-yellow-700">
+                        <button
+                            className="bg-black text-white py-2 px-4 rounded-lg w-full hover:bg-gray-800"
+                        >
                             View
                         </button>
                     </div>
@@ -59,9 +61,9 @@ export default function HomePage() {
             </main>
 
             {/* Footer */}
-            <footer className="bg-white shadow py-4">
+            <footer className="bg-white shadow py-4 mt-auto">
                 <div className="container mx-auto text-center text-gray-600 text-sm">
-                    © 2025 LawnCare Pro. All rights reserved.
+                    © 2025 LawnCare by Lucas. All rights reserved.
                 </div>
             </footer>
         </div>
