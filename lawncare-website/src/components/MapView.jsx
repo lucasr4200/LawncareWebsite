@@ -4,7 +4,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 function MapView() {
     return (
         <MapContainer
-            center={[40.7128, -74.006]} // New York City
+            center={[53.5461, -113.4937]} // Edmonton coords
             zoom={13}
             style={{ height: "100%", width: "100%" }}
         >
