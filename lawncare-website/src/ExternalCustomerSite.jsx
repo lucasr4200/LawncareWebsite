@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function CustomerPage() {
+export default function ExternalCustomerSite() {
     const [booking, setBooking] = useState({
         name: "",
         address: "",

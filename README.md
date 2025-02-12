@@ -43,7 +43,7 @@ LawncareWebsite/
 │   │   │── MapView.jsx  # Interactive map for Today's Planner
 │   │── App.css  # Global styles
 │   │── App.jsx  # Main application entry point
-│   │── CustomerPage.jsx  # Customer-facing site
+│   │── ExternalCustomerSite.jsx  # Customer-facing site
 │   │── HomePage.jsx  # Internal homepage dashboard
 │   │── index.css  # Global styles
 │   │── main.jsx  # React root render

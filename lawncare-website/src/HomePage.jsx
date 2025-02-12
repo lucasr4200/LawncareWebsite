@@ -11,10 +11,30 @@ export default function HomePage() {
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
                     <div className="text-2xl font-bold text-green-600">LawnCare by Lucas</div>
                     <nav className="flex space-x-6">
-                        <a href="#" className="text-gray-700 hover:text-green-600 font-medium">Dashboard</a>
-                        <a href="#" className="text-gray-700 hover:text-green-600 font-medium">Customers</a>
-                        <a href="#" className="text-gray-700 hover:text-green-600 font-medium">Reports</a>
-                        <a href="#" className="text-gray-700 hover:text-green-600 font-medium">Planner</a>
+                        <button
+                            onClick={() => navigate("/")}
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
+                            Dashboard
+                        </button>
+                        <button
+                            onClick={() => navigate("/customers")}
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
+                            Customers
+                        </button>
+                        <button
+                            // onClick={() => navigate("/customers")} TODO
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
+                            Reports
+                        </button>
+                        <button
+                            //onClick={() => navigate("/customers")} TODO
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
+                            Planner
+                        </button>
                     </nav>
                 </div>
             </header>
@@ -42,7 +62,7 @@ export default function HomePage() {
                         <h2 className="text-lg font-semibold text-gray-800 mb-4">Customer-Facing Site</h2>
                         <button
                             className="bg-black text-white py-2 px-4 rounded-lg w-full hover:bg-gray-800"
-                            onClick={() => navigate("/customer")}
+                            onClick={() => navigate("/external_customer")}
                         >
                             Visit
                         </button>

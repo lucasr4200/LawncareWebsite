@@ -6,11 +6,7 @@ export default function TodaysPlan() {
 
     // Start with empty array
     const [destinations, setDestinations] = useState([]);
-
-    const [newCustomer, setNewCustomer] = useState({
-        name: "",
-        location: "",
-        time: "",
+    const [newCustomer, setNewCustomer] = useState({ name: "", location: "", time: "",
     });
 
     // Helper function to remove duplicates
@@ -74,20 +70,32 @@ export default function TodaysPlan() {
         <div className="min-h-screen bg-gray-100 flex flex-col">
             <header className="bg-white shadow">
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                    <div className="text-2xl font-bold text-green-600">LawnCare Pro</div>
+                    <div className="text-2xl font-bold text-green-600">LawnCare by Lucas</div>
                     <nav className="flex space-x-6">
-                        <a href="/" className="text-gray-700 hover:text-green-600 font-medium">
+                        <button
+                            onClick={() => navigate("/")}
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
                             Dashboard
-                        </a>
-                        <a href="#" className="text-gray-700 hover:text-green-600 font-medium">
+                        </button>
+                        <button
+                            onClick={() => navigate("/customers")}
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
                             Customers
-                        </a>
-                        <a href="#" className="text-gray-700 hover:text-green-600 font-medium">
+                        </button>
+                        <button
+                            // onClick={() => navigate("/customers")} TODO
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
                             Reports
-                        </a>
-                        <a href="#" className="text-gray-700 hover:text-green-600 font-medium">
+                        </button>
+                        <button
+                            //onClick={() => navigate("/customers")} TODO
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
                             Planner
-                        </a>
+                        </button>
                     </nav>
                 </div>
             </header>
@@ -135,7 +143,7 @@ export default function TodaysPlan() {
             {/* Modal */}
             {isModalOpen && (
                 <div
-                    className="fixed inset-0 flex items-center justify-center z-10"
+                    className="fixed inset-0 flex items-center justify-center z-50"
                     style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                 >
                     <div className="bg-white rounded-lg p-6 shadow-lg w-96 relative">
@@ -200,7 +208,7 @@ export default function TodaysPlan() {
             {/* Footer */}
             <footer className="bg-white shadow py-4">
                 <div className="container mx-auto text-center text-gray-600 text-sm">
-                    © 2025 LawnCare Pro. All rights reserved.
+                    © 2025 LawnCare by Lucas. All rights reserved.
                 </div>
             </footer>
         </div>
