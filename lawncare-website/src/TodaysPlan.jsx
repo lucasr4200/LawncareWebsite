@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import MapView from "./components/MapView";
 
 export default function TodaysPlan() {
@@ -76,7 +77,7 @@ export default function TodaysPlan() {
                             onClick={() => navigate("/")}
                             className="text-gray-700 hover:text-green-600 font-medium"
                         >
-                            Dashboard
+                            Home
                         </button>
                         <button
                             onClick={() => navigate("/customers")}

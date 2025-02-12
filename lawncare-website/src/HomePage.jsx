@@ -15,7 +15,7 @@ export default function HomePage() {
                             onClick={() => navigate("/")}
                             className="text-gray-700 hover:text-green-600 font-medium"
                         >
-                            Dashboard
+                            Home
                         </button>
                         <button
                             onClick={() => navigate("/customers")}
