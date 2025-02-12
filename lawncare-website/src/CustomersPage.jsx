@@ -65,7 +65,7 @@ export default function CustomersPage() {
             {/* Header */}
             <header className="bg-white shadow">
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                    <div className="text-2xl font-bold text-green-600">LawnCare Pro</div>
+                    <div className="text-2xl font-bold text-green-600">LawnCare by Lucas</div>
                     <nav className="flex space-x-6">
                         <button
                             onClick={() => navigate("/")}
@@ -166,7 +166,7 @@ export default function CustomersPage() {
             {/* Footer */}
             <footer className="bg-white shadow py-4">
                 <div className="container mx-auto text-center text-gray-600 text-sm">
-                    © 2025 LawnCare Pro. All rights reserved.
+                    © 2025 LawnCare by Lucas. All rights reserved.
                 </div>
             </footer>
         </div>
