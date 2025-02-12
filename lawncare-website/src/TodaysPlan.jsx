@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import MapView from "./components/MapView";
 
 export default function TodaysPlan() {
+    const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Start with empty array

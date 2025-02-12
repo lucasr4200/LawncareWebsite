@@ -38,8 +38,30 @@ export default function CustomersPage() {
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
                     <div className="text-2xl font-bold text-green-600">LawnCare by Lucas</div>
                     <nav className="flex space-x-6">
-                        <a href="/" className="text-gray-700 hover:text-green-600 font-medium">Home</a>
-                        <a href="/todays-plan" className="text-gray-700 hover:text-green-600 font-medium">Today's Plan</a>
+                        <button
+                            onClick={() => navigate("/")}
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
+                            Home
+                        </button>
+                        <button
+                            onClick={() => navigate("/customers")}
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
+                            Customers
+                        </button>
+                        <button
+                            // onClick={() => navigate("/customers")} TODO
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
+                            Reports
+                        </button>
+                        <button
+                            //onClick={() => navigate("/customers")} TODO
+                            className="text-gray-700 hover:text-green-600 font-medium"
+                        >
+                            Planner
+                        </button>
                     </nav>
                 </div>
             </header>
