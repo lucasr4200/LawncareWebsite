@@ -38,9 +38,10 @@ export default function TodaysPlan() {
             .map((booking) => ({
                 name: booking.name,
                 location: booking.address,
-                time: booking.time.slice(11, 16), // Extract HH:mm from datetime
+                time: booking.time.slice(11, 16), // Extract HH:mm
                 lat: 40.7128, // Placeholder lat
                 lng: -74.006, // Placeholder long
+                service: booking.service || "N/A",
             }));
 
         // Merge and remove duplicates for extra check again
@@ -122,8 +123,13 @@ export default function TodaysPlan() {
                     <ul>
                         {destinations.map((destination, index) => (
                             <li key={index} className="mb-2 text-gray-800">
-                                <strong>{destination.name}</strong>: {destination.location} at{" "}
-                                {destination.time}
+                                <strong>{destination.name}</strong>
+                                <br />
+                                Address: {destination.location}
+                                <br />
+                                Time: {destination.time}
+                                <br />
+                                Service: {destination.service}
                             </li>
                         ))}
                     </ul>

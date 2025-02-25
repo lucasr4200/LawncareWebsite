@@ -5,6 +5,7 @@ export default function ExternalCustomerSite() {
         name: "",
         address: "",
         time: "",
+        service: "", // NEW FIELD
     });
 
     const [successMessage, setSuccessMessage] = useState("");
@@ -15,14 +16,14 @@ export default function ExternalCustomerSite() {
         // Retrieve existing bookings from local storage or initialize an empty array
         const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
-        // Add the new booking
+        // Add the new booking (including 'service')
         bookings.push(booking);
 
         // Save the updated bookings array back to local storage
         localStorage.setItem("bookings", JSON.stringify(bookings));
 
         // Clear the form and show a success message
-        setBooking({ name: "", address: "", time: "" });
+        setBooking({ name: "", address: "", time: "", service: "" });
         setSuccessMessage("Your booking has been successfully saved!");
     };
 
@@ -45,6 +46,7 @@ export default function ExternalCustomerSite() {
                         <p className="text-green-600 mb-4">{successMessage}</p>
                     )}
                     <form onSubmit={handleBookingSubmit}>
+                        {/* Name */}
                         <div className="mb-4">
                             <label className="block text-gray-700">Name</label>
                             <input
@@ -57,6 +59,8 @@ export default function ExternalCustomerSite() {
                                 required
                             />
                         </div>
+
+                        {/* Address */}
                         <div className="mb-4">
                             <label className="block text-gray-700">Address</label>
                             <input
@@ -69,6 +73,25 @@ export default function ExternalCustomerSite() {
                                 required
                             />
                         </div>
+
+                        {/* Service (New Dropdown) */}
+                        <div className="mb-4">
+                            <label className="block text-gray-700">Service</label>
+                            <select
+                                className="w-full border rounded px-3 py-2 text-gray-800"
+                                value={booking.service}
+                                onChange={(e) =>
+                                    setBooking({ ...booking, service: e.target.value })
+                                }
+                                required
+                            >
+                                <option value="">Select a service</option>
+                                <option value="regular mow">Regular Mow</option>
+                                <option value="mow and weed care">Mow and Weed Care</option>
+                            </select>
+                        </div>
+
+                        {/* Time */}
                         <div className="mb-4">
                             <label className="block text-gray-700">Time</label>
                             <input
@@ -81,6 +104,7 @@ export default function ExternalCustomerSite() {
                                 required
                             />
                         </div>
+
                         <button
                             type="submit"
                             className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
